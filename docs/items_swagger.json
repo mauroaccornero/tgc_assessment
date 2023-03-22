@@ -1,0 +1,70 @@
+openapi: 3.0.0
+info:
+  title: tgc
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+paths:
+  /api/items:
+    get:
+      tags:
+        - default
+      summary: GET ITEMS
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - default
+      summary: CREATE ITEM
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                text: updated text 2
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/items/1:
+    delete:
+      tags:
+        - default
+      summary: DELETE ITEM
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/items/4:
+    get:
+      tags:
+        - default
+      summary: GET ITEM
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/items/3:
+    put:
+      tags:
+        - default
+      summary: UPDATE ITEM
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                text: some new text
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}

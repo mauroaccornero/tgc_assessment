@@ -23,3 +23,16 @@ To run test
 
 Check package.json for linting, types checking and audit
 
+## TO-DO
+
+# Backend
+
+- middleware for errors
+- middleware for log
+- tests [supertest](https://github.com/ladjs/supertest) or [cypress](https://github.com/cypress-io/cypress)
+- schemas 
+- validation
+
+
+
+
