@@ -1,0 +1,25 @@
+{
+  "name": "tgc_assessment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "packages/frontend",
+    "packages/backend"
+  ],
+  "scripts": {
+    "test": "npm run test --workspaces --if-present",
+    "dev": "concurrently \"npm run dev -w frontend\" \"npm run dev -w backend\"",
+    "lint": "npm run lint:fix --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "types-check": "npm run types-check --workspaces --if-present",
+    "audit": "npm audit --production"
+  },
+  "keywords": [],
+  "author": "Mauro Accornero",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
