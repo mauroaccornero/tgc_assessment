@@ -1,14 +1,46 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor, fireEvent } from "@testing-library/react";
 import App from "../src/App";
+import { ItemsProvider } from "../src/context/ItemsContext";
 describe("App unit test", () => {
-  it("App should render text", () => {
+  it("App should render items", () => {
     // arrange
+    const firstItemText = "Mock item";
+    const secondItemText = "Mock item 2";
 
-    const expectedText = "Some react App";
     // act
-    render(<App />);
-    const div = screen.getByText(expectedText);
+    render(
+      <ItemsProvider>
+        <App />
+      </ItemsProvider>
+    );
+
     // assert
-    expect(div).toBeVisible();
+    waitFor(() => {
+      expect(screen.getByText(firstItemText)).toBeVisible();
+      expect(screen.getByText(secondItemText)).toBeVisible();
+    });
+  });
+
+  it("Delete button should be enabled when selecting item", () => {
+    // arrange
+    const firstItemText = "Mock item";
+
+    // act
+    render(
+      <ItemsProvider>
+        <App />
+      </ItemsProvider>
+    );
+
+    // assert
+    waitFor(() => {
+      const deleteButton = screen.getBytext("delete");
+      expect(deleteButton).toBeDisabled();
+
+      const item = screen.getByText(firstItemText);
+      fireEvent.click(item);
+
+      expect(deleteButton).not.toBeDisabled();
+    });
   });
 });

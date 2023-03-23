@@ -1,0 +1,29 @@
+@use '../../styles/vars' as v;
+
+.Button {
+    background: v.$naples_yellow;
+    color: v.$battleship_grey;
+    padding: v.$default_half_space v.$default_space;
+    border-radius: v.$default_half_space;
+    border:0;
+    font-size:0.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: background-color 0.3s, color 0.3s;
+    cursor:pointer;
+
+    &:hover{
+         background: v.$olivine;
+          color: white
+     }
+    &:active{
+         background: v.$flax;
+      color: white;
+     }
+  &:disabled{
+    background: v.$naples_yellow;
+    color: v.$battleship_grey;
+    opacity: 0.8;
+    cursor:default;
+  }
+}

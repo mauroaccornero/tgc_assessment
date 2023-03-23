@@ -1,0 +1,17 @@
+@use '../../styles/reset';
+@use '../../styles/vars' as v;
+
+.container{
+  background: white;
+  border-radius: v.$default_space;
+  margin: v.$default_space;
+
+  & header, & main, & footer{
+    padding: v.$default_space;
+  }
+
+  & main{
+    border-bottom:1px solid v.$light_grey;
+    border-top:1px solid v.$light_grey;
+  }
+}

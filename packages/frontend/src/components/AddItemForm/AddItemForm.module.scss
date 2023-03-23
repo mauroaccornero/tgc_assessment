@@ -1,0 +1,16 @@
+@use '../../styles/vars' as v;
+
+.AddItemForm {
+  display: flex;
+  flex-direction: column;
+  & input {
+    padding: v.$default_half_space;
+    margin-bottom: v.$default_space;
+    border-radius: v.$default_space;
+    border:1px solid v.$light_grey
+  }
+  & .actions{
+    display: flex;
+    justify-content: space-between;
+  }
+}

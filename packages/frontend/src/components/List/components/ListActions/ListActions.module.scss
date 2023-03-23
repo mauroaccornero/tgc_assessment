@@ -1,0 +1,10 @@
+@use "../../../../styles/vars" as v;
+
+.ListActions{
+    padding: v.$default_half_space 0;
+    display:flex;
+    justify-content: space-between;
+    & button{
+
+    }
+}

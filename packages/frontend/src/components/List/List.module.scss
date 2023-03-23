@@ -1,0 +1,9 @@
+@use "../../styles/vars" as v;
+
+.List{
+  padding: v.$default_space 0;
+  & li{
+    padding: v.$default_half_space;
+    cursor:pointer;
+  }
+}

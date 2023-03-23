@@ -1,5 +1,8 @@
 {
   "testEnvironment": "jsdom",
   "verbose": true,
-  "setupFilesAfterEnv": ["<rootDir>/jest.setup.js"]
+  "setupFilesAfterEnv": ["<rootDir>/jest.setup.js"],
+  "moduleNameMapper": {
+    "^.+\\.(css|less|scss)$": "babel-jest"
+  }
 }

@@ -32,6 +32,15 @@ Check package.json for linting, types checking and audit
 - tests [supertest](https://github.com/ladjs/supertest) or [cypress](https://github.com/cypress-io/cypress)
 - schemas 
 - validation
+- env vars
+
+# Frontend
+
+- review components
+- responsive styles
+- test coverage
+- validation
+- env vars
 
 
 

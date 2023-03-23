@@ -1,0 +1,17 @@
+@use './vars' as v;
+
+* {
+  margin:0;
+  padding:0;
+}
+
+ul, ol, li{
+  list-style: none;
+}
+
+body{
+  font-family: sans-serif;
+  font-size:14px;
+  background-color: v.$tea_green;
+  color: v.$dark_grey
+}

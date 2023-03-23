@@ -1,0 +1,7 @@
+@use '../../styles/vars' as v;
+
+.ConfirmDeletion{
+  display:flex;
+  justify-content: space-between;
+  padding-top: v.$default_space 0;
+}

@@ -1,0 +1,11 @@
+@use "../../../../styles/vars" as v;
+
+.selected{
+  background: v.$olivine;
+  color: white;
+  padding: v.$default_half_space v.$default_space;
+  border-radius: v.$default_space;
+  width: auto;
+}
+
+

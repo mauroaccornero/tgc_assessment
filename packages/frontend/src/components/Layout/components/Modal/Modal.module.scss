@@ -1,0 +1,16 @@
+@use '../../../../styles/vars' as v;
+
+.Modal{
+  background-color: #fff;
+  border-radius: v.$default_half_space;
+  padding: v.$default_space;
+  margin: v.$default_half_space;
+  width:auto;
+  min-width:200px;
+  & > h2{
+    margin-bottom: v.$default_space;
+  }
+  & > p{
+    margin-bottom: v.$default_space;
+  }
+}
